@@ -1,0 +1,14 @@
+- lex content
+    - title
+    - tags
+    - headings
+    - links
+    - images
+    - ratings
+    - timestamps
+
+- lex search
+    - tone identifiers (questions, tense, perspective, etc)
+    - uncommon words
+    - quantities
+    - resources
