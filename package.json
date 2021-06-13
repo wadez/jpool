@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wadez/workqrs.git"
+    "url": "git+https://github.com/wadez/jpool.git"
   },
   "bugs": {
-    "url": "https://github.com/wadez/workqrs/issues"
+    "url": "https://github.com/wadez/jpool/issues"
   },
-  "homepage": "https://github.com/wadez/workqrs#readme"
+  "homepage": "https://github.com/wadez/jpool#readme"
 }
