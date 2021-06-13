@@ -4,6 +4,8 @@ All the good package names were taken
 ## What is it
 This package allows you to run jobs in parallel by specifying the number of threads. The only requirements are to add the jobs to the queue and start it.
 
+[![npm package](https://nodei.co/npm/jpool.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jpool/)
+
 ## Basic example (Main.js)
 ```js
 const Pool = require("../src")
