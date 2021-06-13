@@ -16,6 +16,8 @@ The amount of threads is variable, and all states are deterministic. A job will 
 ## Usage
 Clients need at least 2 files. The file that houses the main event loop, and the job file. Jobs are added to the queue by referencing the file name.
 
+
+#### Basic example (Main.js)
 ```js
 // create a new pool. Pass options to configure the initial state.
 const pool = new Pool({threads: 8});
@@ -34,22 +36,6 @@ pool.stop()
 ```
 
 
-#### Basic example (Main.js)
-```js
-const Pool = require("jpool")
-const path = require("path")
-
-var jobs = 30;
-
-const pool = new Pool()
-
-for (var i = 0; i < jobs; i++) {
-    pool.add(path.resolve(__dirname, 'jobs/findRandomNumber.js'))
-}
-
-pool.start()
-```
-
 #### Basic example (Job.js)
 ```js
 const {parentPort, workerData} = require("worker_threads");
@@ -63,7 +49,7 @@ const interval = setInterval(() => {
     if (Math.random() > 0.8) {
         parentPort.postMessage("Found good number")
         clearInterval(interval) // very important!
-        parentPort.close();
+        parentPort.close(); // optional
     }
 }, 1000)
 
