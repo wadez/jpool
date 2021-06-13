@@ -8,7 +8,7 @@ This package allows you to run jobs in parallel by specifying the number of thre
 
 ## Basic example (Main.js)
 ```js
-const Pool = require("../src")
+const Pool = require("jpool")
 const path = require("path")
 
 var jobs = 30;
