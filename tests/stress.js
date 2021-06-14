@@ -5,7 +5,7 @@ var jobs = 3000;
 
 const pool = new Pool({
     jobLimit: jobs,
-    threads: 64,
+    threads: 256,
     messageLogging: true,
 })
 

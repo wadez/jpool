@@ -185,7 +185,7 @@ module.exports = (function () {
                 }
                 dequeWithPool();
                 status()
-                mainLoop()
+                setTimeout(mainLoop, state.timeout);
             }
         }, state.timeout)
     }
