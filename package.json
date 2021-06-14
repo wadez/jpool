@@ -1,6 +1,6 @@
 {
   "name": "jpool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a threaded queue for node worker threads",
   "main": "src/index.js",
   "scripts": {
