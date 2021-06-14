@@ -50,7 +50,9 @@ module.exports = (function () {
                 if (job) {
                     workersCreated++;
 
-                    const {data = {}} = job;
+                    let {jobPath, data} = job;
+                    data = data || {}
+
                     const threadingData = {
                         workerId: id,
                         jobId: workersCreated
@@ -63,7 +65,8 @@ module.exports = (function () {
                     state.onCreate.call(workerData)
                     promises.push(new Promise((resolve, reject) => {
 
-                        const worker = new Worker(job, {
+
+                        const worker = new Worker(jobPath, {
                             workerData
                         })
 
@@ -253,8 +256,8 @@ module.exports = (function () {
         setNumberOfThreads(state.threads)
     }
 
-    function addJob(workerPath) {
-        queue.push(workerPath);
+    function addJob(jobPath, data) {
+        queue.push({jobPath, data});
         jobsCreated++;
     }
 
